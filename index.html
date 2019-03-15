@@ -1,0 +1,235 @@
+<!doctype html>
+
+<html lang="en-US" style="overflow: scroll" id="o">
+<!-- Header -->
+
+<head>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120378562-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120378562-1');
+    </script>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Lootstreak gives gamers of any level an opportunity to make a return on their investment of time spent playing games. Add extra excitement to your game. Play with purpose.">
+    <title>LootStreak</title>
+    <link rel="icon" href=LOGO2.png>
+    <link href="CSSdata.css" rel="stylesheet" type="text/css">
+    <script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body style="overflow: scroll">
+    <!-- Main Container -->
+    <div class="container" style="width: 100%; height = 100%; padding-left: 0px; padding-right: 0px">
+        <header>
+            <a href="">
+                <div style="float: left; padding-left: 25px; padding-top: 7px"><img src="LOGO2.png" height="35" width="35" border="1px"></div>
+                <h4 class="logo">LOOTSTREAK</h4>
+            </a>
+
+            <button id='signup' style="width: 100px; float: right; margin-right: 3%; margin-top: 1%; border-radius: 25px; font-weight: bold" onclick="createAcct()">
+                Sign Up
+            </button>
+            <button id='login' style="width: 100px; float: right; margin-right: 2%; margin-top: 1%; border-radius: 25px; color: white; background-color: #35BA0F; font-weight: bold" onclick="login()">
+                Log In
+            </button>
+
+        </header>
+
+        <!-- Carousel-->
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+            </ol>
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="item active">
+                    <img src="SLIDE1.png">
+                </div>
+                <!-- Slide 2 -->
+                <div class="item">
+                    <img src="SLIDE2.png">
+                </div>
+                <div class="item">
+                    <img src="SLIDE3.png">
+                </div>
+            </div>
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <!-- Survey -->
+        <div style="background-color: black;">
+            <form style="text-align: center; font-size: 12pt; color: white" id="mainForm" method="post" action="/submitsurvey.php" onsubmit="return submitForm(this)">
+                <br>
+                <div style="font-size: 16pt; font-weight: bold; margin-bottom: -10px">
+                    Please fill out this quick survey!
+                </div>
+                <img src="whiteline.png">
+                <br>
+                <!-- Question 1 -->
+                On a scale of 1-10, how likely would you be to use a platform that offers real-time betting on personal performance in video games?
+                <br>
+                <select class="survey_questions" name="question1">
+                    <option value="Nothing">
+                    </option>
+                    <option value="1">
+                        1
+                    </option>
+                    <option value="2">
+                        2
+                    </option>
+                    <option value="3">
+                        3
+                    </option>
+                    <option value="4">
+                        4
+                    </option>
+                    <option value="5">
+                        5
+                    </option>
+                    <option value="6">
+                        6
+                    </option>
+                    <option value="7">
+                        7
+                    </option>
+                    <option value="8">
+                        8
+                    </option>
+                    <option value="9">
+                        9
+                    </option>
+                    <option value="10">
+                        10
+                    </option>
+                </select>
+                <br>
+                <!-- Question 2 -->
+                Are you looking for another competitive aspect to gaming?
+                <br>
+                <select class="survey_questions" name="question2">
+                    <option value="Nothing">
+                    </option>
+                    <option value="Yes">
+                        Yes
+                    </option>
+                    <option value="Maybe">
+                        Maybe
+                    </option>
+                    <option value="No">
+                        No
+                    </option>
+                </select>
+                <br>
+                <!-- Question 3 -->
+                Do you know of any other platforms that do something similar?
+                <br>
+                <select class="survey_questions" name="question3">
+                    <option value="Nothing">
+                    </option>
+                    <option value="Yes">
+                        Yes
+                    </option>
+                    <option value="No">
+                        No
+                    </option>
+                </select>
+                <br>
+                <!-- Question 4 -->
+                Would you use this platform to play with friends?
+                <br>
+                <select class="survey_questions" name="question4">
+                    <option value="Nothing">
+                    </option>
+                    <option value="Yes">
+                        Yes
+                    </option>
+                    <option value="Maybe">
+                        Maybe
+                    </option>
+                    <option value="No">
+                        No
+                    </option>
+                </select>
+                <br>
+                <br>
+                <!-- Submit Button -->
+                <input type="submit" value="Submit" style="color: black; border-radius: 25px">
+            </form>
+            <br>
+        </div>
+        <!-- Footer Section -->
+        <section id="contact" style="height: 20%">
+            <h2 class="hidden">Footer Banner Section </h2>
+
+            <div class="simple-subscription-form">
+                <form style="padding-bottom: 4%" method="post" action="/submitemail.php" onsubmit="return submitForm(this);">
+                    <h4>Subscribe</h4>
+                    <p>Receive updates and latest news direct from our team. Simply enter your email below:</p>
+                    <input name="email" id="email" class="input-group-field" style="margin: auto; width: 200px; color: black; background-color: white" type="email" placeholder="Email" required>
+
+                    <input type="submit" value="Sign up" style="color: black; border-radius: 25px">
+
+                </form>
+            </div>
+        </section>
+        <!-- Main Container Ends -->
+        <script>
+            "use strict";
+
+            function submitForm(oFormElement) {
+                var xhr = new XMLHttpRequest();
+                xhr.onload = function() {
+                    alert(xhr.responseText);
+                }
+                
+                xhr.open(oFormElement.method, oFormElement.action, true);
+                xhr.send(new FormData(oFormElement));
+                return false;
+            }
+        </script>
+
+    
+
+         <script>
+            function login() {
+                window.location.href = "https://www.lootstreak.com/login";
+            }
+        </script>
+        
+         <script>
+            function createAcct() {
+                window.location.href = "https://www.lootstreak.com/create_account";
+            }
+        </script>
+        
+        
+
+    </div>
+</body>
+
+</html>

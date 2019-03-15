@@ -1,0 +1,67 @@
+
+        <div id="id01" class="modal" style="overflow: scroll">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close SUBG">&times;</span>
+            <form class="subackground-content" method="post" action="/createlogin.php" onsubmit="return createAcct(this); return stopShowing(id01)">
+                <div>
+                    <h1 style="text-align: center">Sign Up</h1>
+                    <p style="text-align: center">Please fill in this form to create an account.</p>
+                    <hr>
+                    <label for="email" style="padding-left: 2.5%"><b>Email</b></label>
+
+                    <input style="width: 95%; margin-left: 2.5%" type="email" placeholder="Enter Email" name="suemail" id="username" required>
+
+                    <label for="psw" style="padding-left: 2.5%"><b>Password</b></label>
+                    <input style="width: 95%; margin-left: 2.5%" type="password" placeholder="Enter Password" name="supsw" required>
+
+                    <label for="psw-repeat" style="padding-left: 2.5%"><b>Repeat Password</b></label>
+                    <input style="width: 95%; margin-left: 2.5%" type="password" placeholder="Repeat Password" name="supsw-repeat" required>
+
+                    <label for="twitch" style="padding-left: 2.5%"><b>Twitch Username</b></label>
+                    <input style="width: 95%; margin-left: 2.5%" type="text" placeholder="Username" name="twitch" required>
+
+                    <label for="gamertag" style="padding-left: 2.5%"><b>Gamertag</b></label>
+                    <input style="width: 95%; margin-left: 2.5%" type="text" placeholder="Gamertag" name="gamertag" required>
+
+                    <label style="margin-left: 2.5%">
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <p style="margin-left: 2.5%">By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id01').style.display='none'" style="width: 47.5%; margin-left: 2.5%; background-color: #f44336; color: white; padding: 2%">Cancel</button>
+                        <button style="width: 47.5%; background-color: #4CAF50; color: white; padding: 2%; margin-left: -4px" type="submit">Sign Up</button>
+
+                    </div>
+                    <br>
+                </div>
+            </form>
+        </div>
+
+        <div id="id02" class="modal" ; style="overflow: scroll">
+            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close SUBG">&times;</span>
+            <form class="subackground-content" method="post" action="/submitlogin.php" onsubmit="return login(this)">
+                <div>
+                    <h1 style="text-align: center">Log In</h1>
+
+                    <hr>
+                    <label for="email" style="padding-left: 2.5%"><b>Email</b></label>
+
+                    <input type="email" id="loginname" style="width: 95%; margin-left: 2.5%" type="text" placeholder="Enter Email" name="liemail" required>
+
+                    <label for="psw" style="padding-left: 2.5%"><b>Password</b></label>
+                    <input style="width: 95%; margin-left: 2.5%" type="password" placeholder="Enter Password" name="lipsw" required>
+
+                    <label style="margin-left: 2.5%">
+                        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+                    </label>
+
+                    <div class="clearfix">
+                        <button type="button" onclick="document.getElementById('id02').style.display='none'" style="width: 47.5%; margin-left: 2.5%; background-color: #f44336; color: white; padding: 2%">Cancel</button>
+                        <button style="width: 47.5%; background-color: #4CAF50; color: white; padding: 2%; margin-left: -4px" type="submit">Log In</button>
+
+                    </div>
+                    <br>
+                </div>
+            </form>
+        </div>
